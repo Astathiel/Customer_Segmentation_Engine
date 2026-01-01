@@ -2,3 +2,4 @@
 __pycache__/
 *.csv
 notes.md
+random_customer_generator.py

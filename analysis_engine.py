@@ -21,10 +21,13 @@ def generate_dummy_data_file(n_customers=200):
         'Monetary_Total_Spent': montery
     })
     
+    data.to_csv('dummy_data.csv', index=False)
+    print("Dummy data file 'dummy_data.csv' generated.")
     return data
 
 def run_segmentation():
-    df = generate_dummy_data_file()
+    df = generate_dummy_data_file() # <--- Replace with your own data or comment out/remove
+    # df = pd.read_csv('dummy_rfm_data.csv') # < --- Replace with your own csv file path
     
     features = df[['Recency_Days_Ago', 'Frequency_Purchases', 'Monetary_Total_Spent']]
     
